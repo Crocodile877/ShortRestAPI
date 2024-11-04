@@ -39,8 +39,6 @@ func main() {
 		os.Exit(1)
 	}
 
-	//TODO: init router: chi, chi render
-
 	router := chi.NewRouter()
 
 	router.Use(middleware.RequestID)
