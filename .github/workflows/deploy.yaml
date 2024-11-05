@@ -11,10 +11,10 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     env:
-      HOST: NONE@51.250.32.233
-      DEPLOY_DIRECTORY: /NONE/apps/ShortRestAPI
-      CONFIG_PATH: /NONE/apps/ShortRestAPI/config/prod.yaml
-      ENV_FILE_PATH: /NONE/apps/ShortRestAPI/config.env
+      HOST: crocodile@51.250.32.233
+      DEPLOY_DIRECTORY: /crocodile/apps/ShortRestAPI
+      CONFIG_PATH: /crocodile/apps/ShortRestAPI/config/prod.yaml
+      ENV_FILE_PATH: /crocodile/apps/ShortRestAPI/config.env
 
     steps:
       - name: Checkout repository
