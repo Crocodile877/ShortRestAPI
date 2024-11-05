@@ -3,13 +3,13 @@ Description= Short URL
 After=network.target
 
 [Service]
-User=root
-WorkingDirectory=/root/apps/ShortRestAPI
-ExecStart=/root/apps/ShortRestAPI/ShortRestAPI
+User=None
+WorkingDirectory=/None/apps/ShortRestAPI
+ExecStart=/None/apps/ShortRestAPI/ShortRestAPI
 Restart=always
 RestartSec=4
 StandardOutput=inherit
-EnvironmentFile=/root/apps/ShortRestAPI/config.env
+EnvironmentFile=/None/apps/ShortRestAPI/config.env
 
 [Install]
 WantedBy=multi-user.target

@@ -11,10 +11,10 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     env:
-      HOST: root@51.250.32.233
-      DEPLOY_DIRECTORY: /root/apps/ShortRestAPI
-      CONFIG_PATH: /root/apps/ShortRestAPI/config/prod.yaml
-      ENV_FILE_PATH: /root/apps/ShortRestAPI/config.env
+      HOST: NONE@51.250.32.233
+      DEPLOY_DIRECTORY: /NONE/apps/ShortRestAPI
+      CONFIG_PATH: /NONE/apps/ShortRestAPI/config/prod.yaml
+      ENV_FILE_PATH: /NONE/apps/ShortRestAPI/config.env
 
     steps:
       - name: Checkout repository
