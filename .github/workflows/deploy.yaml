@@ -35,7 +35,7 @@ jobs:
       - name: Build app
         run: |
           go mod download
-          go build -o ShortRestAPI ./cmd/ShortRestAPI
+          go build -o ShortRestAPI ./cmd/shortener-for-url
       - name: Deploy to VM
         run: |
           sudo apt-get install -y ssh rsync
