@@ -65,4 +65,4 @@ jobs:
           ssh -i deploy_key.pem -o StrictHostKeyChecking=no ${{ env.HOST }} "sudo mv /tmp/ShortRestAPI.service /etc/systemd/system/ShortRestAPI.service"
       - name: Start application
         run: |
-          ssh -t -i deploy_key.pem -o StrictHostKeyChecking=no ${{ env.HOST }} "sudo systemctl daemon-reload && systemctl restart ShortRestAPI.service"
+          ssh -i deploy_key.pem -o StrictHostKeyChecking=no ${{ env.HOST }} "sudo systemctl daemon-reload && systemctl restart ShortRestAPI.service"
