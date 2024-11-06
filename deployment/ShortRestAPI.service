@@ -13,3 +13,4 @@ EnvironmentFile=/crocodile/apps/ShortRestAPI/config.env
 
 [Install]
 WantedBy=multi-user.target
+
