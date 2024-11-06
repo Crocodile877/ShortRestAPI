@@ -22,7 +22,7 @@ const (
 )
 
 func main() {
-	os.Setenv("CONFIG_PATH", "config/config.yaml")
+	os.Setenv("CONFIG_PATH", "config/local.yaml")
 
 	cfg := config.MustLoad()
 
