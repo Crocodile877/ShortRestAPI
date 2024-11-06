@@ -47,7 +47,7 @@ jobs:
           DEPLOY_SSH_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
       - name: Remove old systemd service file
         run: |
-          ssh -i deploy_key.pem -o StrictHostKeyChecking=no ${{ env.HOST }} "rm -f /etc/systemd/system/ShortRestAPI.service"
+          ssh -i deploy_key.pem -o StrictHostKeyChecking=no ${{ env.HOST }} "sudo rm -f /etc/systemd/system/ShortRestAPI.service"
       - name: List workspace contents
         run: |
           echo "Listing deployment folder contents:"
@@ -62,7 +62,7 @@ jobs:
       - name: Copy systemd service file
         run: |
           scp -i deploy_key.pem -o StrictHostKeyChecking=no ${{ github.workspace }}/deployment/ShortRestAPI.service ${{ env.HOST }}:/tmp/ShortRestAPI.service
-          ssh -i deploy_key.pem -o StrictHostKeyChecking=no ${{ env.HOST }} "mv /tmp/ShortRestAPI.service /etc/systemd/system/ShortRestAPI.service"
+          ssh -i deploy_key.pem -o StrictHostKeyChecking=no ${{ env.HOST }} "sudo mv /tmp/ShortRestAPI.service /etc/systemd/system/ShortRestAPI.service"
       - name: Start application
         run: |
-          ssh -i deploy_key.pem -o StrictHostKeyChecking=no ${{ env.HOST }} "systemctl daemon-reload && systemctl restart ShortRestAPI.service"
+          ssh -i deploy_key.pem -o StrictHostKeyChecking=no ${{ env.HOST }} "sudo systemctl daemon-reload && systemctl restart ShortRestAPI.service"
