@@ -5,7 +5,7 @@ After=network.target
 [Service]
 User=crocodile
 WorkingDirectory=/crocodile/apps/ShortRestAPI
-ExecStart=/crocodile/apps/ShortRestAPI/shortener-for-url
+ExecStart=/crocodile/apps/ShortRestAPI/shortener-for-url/main
 Restart=always
 RestartSec=4
 StandardOutput=inherit
